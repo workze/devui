@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card">
+    <h2 class="card-header">Kafka Consumer</h2>
+    <div class="card-body">
+      <app-input [data]="data['k.c.broker']" [label]="'Broker'"></app-input>
+      <app-input [data]="data['k.c.topic']" [label]="'Topic'"></app-input>
+      <app-input [data]="data['k.c.group']" [label]="'Group'"></app-input>
+      <app-output [data]="console" [label]="'Console'"></app-output>
+      <app-button (onClicked)="connect()" [label]="'Connect'"></app-button>
+      <app-button (onClicked)="close()" [label]="'Close'"></app-button>
+      <app-button (onClicked)="clear()" [label]="'Clear Console'"></app-button>
+    </div>
+  </div>
+</div>

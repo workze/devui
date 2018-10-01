@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+ul, ul li{
+  list-style: none;
+  text-decoration: none;
+  height: 20px;
+}
+ul li{
+  float: left;
+  font-size: 20px;
+  line-height: 1;
+  margin-right: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.box{
+  border: 1px solid gray;
+}
+
+.w200{
+  width:200px;
+}
+
+.block{
+  display: block;
+}
+
+.w800{
+  width: 800px;
+}
+.w400{
+  width: 400px;
+}
+

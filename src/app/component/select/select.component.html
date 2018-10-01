@@ -1,0 +1,11 @@
+<div class="row mb-2">
+  <div class="col-12">
+    <label class="">{{label}} </label>
+  </div>
+  <div class="col-12">
+    <select class="form-control" type="text" [(ngModel)]="ds[id]">
+      <option *ngFor="let option of ds[dsId]" value="{{option}}">{{option}}</option>
+    </select>
+  </div>
+</div>
+

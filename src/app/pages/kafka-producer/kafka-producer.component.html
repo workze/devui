@@ -1,0 +1,13 @@
+<div class="container" style="width: 100%">
+    <div class="card">
+        <h2 class="card-header">Kafka Producer</h2>
+        <div class="card-body">
+            <app-input [label]="'Broker'" [data]="data['k.p.broker']"></app-input>
+            <app-input [label]="'Topic'" [data]="data['k.p.topic']"></app-input>
+            <app-input [label]="'Message'" [data]="data['k.p.message']"></app-input>
+            <app-input [label]="'Console'" [data]="console"></app-input>
+            <app-button [label]="'Send'" (onClicked)="send($event)"></app-button>
+            <app-button [label]="'Send*100'" (onClicked)="sendWithTimes(100)"></app-button>
+        </div>
+    </div>
+</div>
