@@ -10,7 +10,7 @@ import {KafkaComsumerComponent} from "./pages/kafka-comsumer/kafka-comsumer.comp
 const routes: any = [
   {
     path: '',
-    redirectTo: 'kafka-p',
+    redirectTo: 'kafka-c',
     pathMatch: 'full'
   },
   {path: 'kafka-p', component: KafkaProducerComponent},

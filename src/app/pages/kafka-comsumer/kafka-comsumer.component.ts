@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {timer} from "rxjs";
 import {PythonService} from "../../service/python.service";
+import {KafkaWsService} from "../../service/wsservice/kafka-ws.service";
 
 @Component({
     selector: 'app-kafka-comsumer',
@@ -16,7 +17,7 @@ export class KafkaComsumerComponent implements OnInit {
     public k_c_timer;
     public k_c_subscribe;
 
-    constructor(private ps: PythonService) {
+    constructor(private ps: PythonService, private kws: KafkaWsService) {
         // 每5s轮询一次
         this.k_c_timer = timer(1000, 5000);
         this.k_c_subscribe = this.k_c_timer.subscribe(val => {
@@ -26,6 +27,9 @@ export class KafkaComsumerComponent implements OnInit {
                     this.console = this.console + res['data'];
                 });
             }
+        });
+        kws.messages.subscribe(mes => {
+            this.console += mes + '\n';
         });
     }
 
